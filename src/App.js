@@ -3,7 +3,7 @@ import TopBar from "./components/templates/TopBar";
 import PopularMovie from "./components/PopularMovie";
 import TopRatedMovie from "./components/TopRatedMovie";
 import UpcomingMovie from "./components/UpcomingMovie";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import DiscoverMovie from "./components/DiscoverMovie";
 import MovieDetail from "./components/MovieDetail";
 import SearchMovie from "./components/SearchMovie";
@@ -76,7 +76,7 @@ function App({ sidebarMenu, getGenres }) {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <main className="grid grid-cols-12 min-h-screen">
           <ScrollSidebar
             ref={sidebar}
@@ -119,7 +119,7 @@ function App({ sidebarMenu, getGenres }) {
             </section>
           </div>
         </main>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
